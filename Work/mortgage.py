@@ -72,10 +72,10 @@ while principal > 0:
         principal_list.append(principal)
     else:
         principal = principal * (1+rate/12) - payment
-        total_paid = total_paid + payment
         if principal < 0:
             principal = 0
             payment = principal_list[-1]
+        total_paid = total_paid + payment
         months = months +1
         payments_list.append(total_paid)
         principal_list.append(principal)
