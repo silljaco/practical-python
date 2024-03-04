@@ -63,6 +63,9 @@ while principal > 0:
     if months >= extra_payment_start_month and months <= extra_payment_end_month:
         special_payment = payment + extra_payment
         principal = principal * (1 + rate/12) - special_payment
+        if prinicipal < 0:
+            principal = 0
+            special_payment = principal_list[-1]
         total_paid = total_paid + special_payment
         months +=1
         payments_list.append(total_paid)
@@ -70,9 +73,13 @@ while principal > 0:
     else:
         principal = principal * (1+rate/12) - payment
         total_paid = total_paid + payment
+        if principal < 0:
+            principal = 0
+            payment = principal_list[-1]
         months = months +1
         payments_list.append(total_paid)
         principal_list.append(principal)
+months -= 1
 
 payments_overview = pd.DataFrame(list(zip(payments_list, principal_list)),
                                  columns = ['Payments (sum)', 'Remaining Principal'])
