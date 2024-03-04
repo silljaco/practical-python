@@ -18,11 +18,11 @@ print('Total paid', total_paid)
 
 months = 0
 
-while principal > 0
+while principal > 0:
     if months >= 12
-        principal = principal * 1+rate/12) - payment - 1000
+        principal = principal * (1+rate/12) - payment - 1000
         total paid = total_paid + payment
-    else
+    else:
          principal = principal * (1+rate/12) - payment
          total_paid = total_paid + payment
 
