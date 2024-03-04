@@ -16,14 +16,17 @@ print('Total paid', total_paid)
 
 ### with 1000$ extra payment for the first 12 months
 
-months = 0
+months = 1
 
 while principal > 0:
-    if months >= 12
+    if months <= 12:
         principal = principal * (1+rate/12) - payment - 1000
-        total paid = total_paid + payment
+        total_paid = total_paid + payment + 1000
+        months = months +1
     else:
          principal = principal * (1+rate/12) - payment
          total_paid = total_paid + payment
+         months = months +1
 
 print ('Total paid:', total_paid, '$')
+print ('In', months, 'months')
