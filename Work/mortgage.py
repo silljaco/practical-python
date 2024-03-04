@@ -75,7 +75,7 @@ while principal > 0:
         principal_list.append(principal)
 
 payments_overview = pd.DataFrame(list(zip(payments_list, principal_list)),
-                                 columns = ['Payments (sum)', 'Remaining Prinicpal'])
+                                 columns = ['Payments (sum)', 'Remaining Principal'])
 
 print(payments_overview)
 print ('Total paid:', round(total_paid, 2), '$')
