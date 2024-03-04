@@ -35,6 +35,8 @@ while principal > 0:
     months = months +1
 '''
 
+### with variable extra payment periods
+
 while principal > 0:
     if months >= extra_payment_start_month and months <= extra_payment_end_month:
         principal = principal * (1 + rate/12) - payment - extra_payment
@@ -47,3 +49,8 @@ while principal > 0:
 
 print ('Total paid:', round(total_paid, 2), '$')
 print ('In', months, 'months with extra payments of 1000$ starting from', extra_payment_start_month, 'to', extra_payment_end_month)
+
+
+### Printing results line by line (in three rows) ###
+
+
