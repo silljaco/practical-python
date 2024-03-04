@@ -6,7 +6,9 @@ principal = 500000.0
 rate = 0.05
 payment = 2684.11
 total_paid = 0.0
-'''
+
+''' multiline comment to cut out example code
+
 while principal > 0:
     principal = principal * (1+rate/12) - payment
     total_paid = total_paid + payment
@@ -28,5 +30,5 @@ while principal > 0:
     total_paid = total_paid + payment
     months = months +1
 
-print ('Total paid:', total_paid, '$')
+print ('Total paid:', round(total_paid, 2), '$')
 print ('In', months, 'months')
