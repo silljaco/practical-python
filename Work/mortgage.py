@@ -57,7 +57,7 @@ print ('In', months, 'months with extra payments of 1000$ starting from', extra_
 import pandas as pd
 
 payments_list = []
-principal_list []
+principal_list = []
 
 while principal > 0:
     if months >= extra_payment_start_month and months <= extra_payment_end_month:
