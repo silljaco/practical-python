@@ -36,7 +36,7 @@ while principal > 0:
 '''
 
 ### with variable extra payment periods
-
+'''
 while principal > 0:
     if months >= extra_payment_start_month and months <= extra_payment_end_month:
         principal = principal * (1 + rate/12) - payment - extra_payment
@@ -49,8 +49,31 @@ while principal > 0:
 
 print ('Total paid:', round(total_paid, 2), '$')
 print ('In', months, 'months with extra payments of 1000$ starting from', extra_payment_start_month, 'to', extra_payment_end_month)
-
+'''
 
 ### Printing results line by line (in three rows) ###
 
+# import numpy as np
+import pandas as pd
+
+payments_list = []
+principal_list []
+
+while principal > 0:
+    if months >= extra_payment_start_month and months <= extra_payment_end_month:
+        special_payment = payment + extra_payment
+        principal = principal * (1 + rate/12) - special_payment
+        total_paid = total_paid + special_payment
+        months +=1
+        payments_list.append(total_paid)
+        principal_list.append(principal)
+    else:
+        principal = principal * (1+rate/12) - payment
+        total_paid = total_paid + payment
+        months = months +1
+        payments_list.append(total_paid)
+        principal_list.append(principal)
+
+payments_overview = pd.DataFrame(list(zip(payments_list, principal_list)),
+                                 columns = ['Payments (sum)', 'Remaining Prinicpal'])
 
