@@ -87,7 +87,9 @@ payments_overview = pd.DataFrame(list(zip(payments_list, principal_list)),
 print(payments_overview)
 
 # print ('Total paid:', round(total_paid, 2), '$')
-f'Total paid: $ {total_paid:0.2f}'
+statement_one = f'Total paid: $ {total_paid:0.2f}'
+statement_one
 
 # print ('In', months, 'months with extra payments of 1000$ starting from', extra_payment_start_month, 'to', extra_payment_end_month)
-f'In {months} months, months with extra payments of $ {extra_payment}, starting from {extra_payment_start_month} to {extra_payment_end_month}.'
+statement_two = f'In {months} months, months with extra payments of $ {extra_payment}, starting from {extra_payment_start_month} to {extra_payment_end_month}.'
+statement_two
