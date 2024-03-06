@@ -6,7 +6,6 @@
 with open('Data/portfolio.csv', 'rt') as f:
   for line in f:
     print(line, end='')
-'''
 
 f = open('Data/portfolio.csv', 'rt')
 headers = next(f).split(',') # next() skips the first line of the table
@@ -16,3 +15,8 @@ for line in f:
   print(row)
 
 f.close()
+'''
+
+with open('Data/portfolio.csv', 'rt') as f:
+  for line in f:
+    print(line, end='')
