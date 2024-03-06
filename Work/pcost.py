@@ -9,7 +9,10 @@ with open('Data/portfolio.csv', 'rt') as f:
 '''
 
 f = open('Data/portfolio.csv', 'rt')
-headers = next(f)
+headers = next(f).split(',')
 headers
 for line in f:
-  print(line, end='')
+  row = line.split(',')
+  print(row)
+
+f.close()
