@@ -22,7 +22,7 @@ f.close()
 total_cost = 0.0
 
 def portfolio_cost(filname):
-  with open('Data/portfolio.csv', 'rt') as f:
+  with open('filename', 'rt') as f:
     headers = next(f)
     for line in f:
         row = line.split(',')
@@ -30,7 +30,7 @@ def portfolio_cost(filname):
         price = float(row[2])
         total_cost += nshares * price
     return total_cost
-    print('Total cost', total_cost)
       
 cost = portfolio_cost('/Data/portfolio.csv')
+print('Total cost', total_cost)
 
