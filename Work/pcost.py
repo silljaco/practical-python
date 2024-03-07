@@ -29,7 +29,8 @@ def portfolio_cost(filname):
         nshares = int(row[1])
         price = float(row[2])
         total_cost += nshares * price
-      return total_cost
+    return total_cost
+    print('Total cost', total_cost)
       
 cost = portfolio_cost('/Data/portfolio.csv')
-print('Total cost', total_cost)
+
