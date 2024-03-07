@@ -33,6 +33,6 @@ def portfolio_cost(filname):
         total_cost += nshares * price
     return total_cost
       
-cost = portfolio_cost('/Data/portfolio.csv')
+cost = portfolio_cost('Data/portfolio.csv')
 print('Total cost', total_cost)
 
