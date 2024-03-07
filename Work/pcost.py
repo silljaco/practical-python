@@ -21,8 +21,10 @@ f.close()
 
 total_cost = 0.0
 
+file_name = '/Data/portfolio.csv'
+
 def portfolio_cost(filname):
-  with open('filename', 'rt') as f:
+  with open('file_name', 'rt') as f:
     headers = next(f)
     for line in f:
         row = line.split(',')
