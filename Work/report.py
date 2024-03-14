@@ -5,8 +5,8 @@
 
 import csv
 
-def portfolio_cost(filename):
-  '''Calculates the total cost (shares*price) of a portfolio file'''
+def portfolio_list(filename):
+  '''Creates a list of tuples per stockname, amount, price'''
   portfolio = []
 
   with open(filename, 'rt') as f:
@@ -17,6 +17,10 @@ def portfolio_cost(filename):
       portfolio.append(holding)
       
       return portfolio
+
+
+filename = input('Enter filename: ')
+portfolio_list(filename)
                  
   
 
