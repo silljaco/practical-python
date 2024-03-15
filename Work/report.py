@@ -47,10 +47,7 @@ def read_prices(filename):
     
     for row in rows:
       try:
-        prices= {
-          'name' : row[0],
-          'price' : float(row[1])
-        }
+         prices[row[0]] = float(row[1])
       except IndexError:
         pass
 
