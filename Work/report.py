@@ -36,16 +36,18 @@ def read_portfolio(filename):
 
 import csv
 
-prices = {}
+
 
 def read_prices(filename):
+  
+  prices = {}
   
   with open(filename, 'rt') as f:
     rows = csv.reader(f)
     
     for row in rows:
       try:
-        stock = {
+        prices= {
           'name' : row[0],
           'price' : float(row[1])
         }
@@ -53,7 +55,6 @@ def read_prices(filename):
         pass
 
   return prices
-
 
 
 # filename = input('Enter filename: ') # to enter the filename in the cosolte - not ideal solution
