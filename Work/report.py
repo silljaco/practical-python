@@ -32,6 +32,31 @@ def read_portfolio(filename):
       
   return portfolio
 
+### Importing the new file: prices.csv ###
+
+import csv
+
+prices = {}
+
+def read_prices(filename):
+  
+  with open(filename, 'rt') as f:
+    rows = csv.reader(f)
+    
+    for row in rows:
+      try:
+        stock = {
+          'name' : row[0],
+          'price' : float(row[1])
+        }
+      except IndexError:
+        pass
+        
+  prices.append(stock)
+
+return prices
+
+
 
 # filename = input('Enter filename: ') # to enter the filename in the cosolte - not ideal solution
 # read_portfolio(filename)
