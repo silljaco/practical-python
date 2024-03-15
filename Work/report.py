@@ -51,8 +51,6 @@ def read_prices(filename):
         }
       except IndexError:
         pass
-        
-  prices.append(stock)
 
   return prices
 
