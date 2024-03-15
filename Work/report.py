@@ -17,7 +17,7 @@ def read_portfolio(filename):
       holding = (row[0], int(row[1]), float(row[2]))
       portfolio.append(holding)
       
-      return portfolio
+  return portfolio
 
 
 # filename = input('Enter filename: ') # to enter the filename in the cosolte - not ideal solution
