@@ -5,8 +5,9 @@
 
 import csv
 
-def portfolio_list(filename):
+def read_portfolio(filename):
   '''Creates a list of tuples per stockname, amount, price'''
+  
   portfolio = []
 
   with open(filename, 'rt') as f:
@@ -19,8 +20,8 @@ def portfolio_list(filename):
       return portfolio
 
 
-filename = input('Enter filename: ')
-portfolio_list(filename)
+# filename = input('Enter filename: ') # to enter the filename in the cosolte - not ideal solution
+# read_portfolio(filename)
                  
   
 
