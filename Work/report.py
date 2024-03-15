@@ -54,10 +54,18 @@ def read_prices(filename):
   return prices
 
 
-# filename = input('Enter filename: ') # to enter the filename in the cosolte - not ideal solution
-# read_portfolio(filename)
-                 
-  
+def portfolio_cost(portfolio):
+  total_cost = 0.0
+  for s in portfolio:
+    total_cost += s['shares'] * s['price']
+  print('The total cost for the portfolio was {}'.format(total_cost)    
+  return total_cost
+             
+def portfolio_value(portfolio):
+  total_value = 0.0
+  for s in portfolio:
+     total_value += s['shares'] * prices[s['name']]
+  return total_value
 
 
 
