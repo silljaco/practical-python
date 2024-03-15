@@ -54,7 +54,7 @@ def read_prices(filename):
         
   prices.append(stock)
 
-return prices
+  return prices
 
 
 
